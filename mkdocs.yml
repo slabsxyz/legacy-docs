@@ -1,0 +1,55 @@
+#===============================
+#        General info
+#===============================
+site_name: Dippi Documentation
+repo_url: https://github.com/dippixyz
+
+#===============================
+theme: # Current theme's config
+#===============================
+  # Basics
+  name: material
+  logo: assets/logo.png
+  favicon: assets/logo.png
+  # Color Schemes (and light/dark modes)
+  palette:
+    # Light mode
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+    # Dark mode
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+  # Feature set for this theme
+  features:
+    - content.code.copy           # Allow copy button un code blocks
+    - content.code.annotate       # Allow pop-up comments in code blocks
+
+#======================================================================
+markdown_extensions: # Extensions used to build a more featureful docs
+#======================================================================
+  # Displays Table of Contents on the right side of each page
+  - toc:
+      permalink: true             # Linkable sections
+  # Syntax highlighting for code blocks, linkable numbered lines
+  - pymdownx.inlinehilite         # Specific for highlighting of inline blocks
+  - pymdownx.highlight:
+      linenums: true              # Numbered lines activated
+      anchor_linenums: true       # Linkable numbered lines
+      line_spans: __span          # Needed for line highlight compatibility
+      pygments_lang_class: true   # Needed for custom annotation markers compatibility
+  # Allow emojis to be used 
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji    # Set of emojis used
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg # Rendering function used
+  # Functionality
+  - pymdownx.snippets             # Allow inserting snippets of other files
+  - pymdownx.superfences          # Allow arbitrary nesting of content blocks
+  - attr_list                     # Allows to add HTML/CSS to almost every Markdown element
