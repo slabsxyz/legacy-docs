@@ -3,6 +3,8 @@
 #===============================
 site_name: Dippi Documentation
 repo_url: https://github.com/dippixyz
+extra:
+  generator: false
 
 #===============================
 theme: # Current theme's config
@@ -22,8 +24,8 @@ theme: # Current theme's config
         name: Switch to dark mode
     # Dark mode
     - scheme: slate
-      primary: indigo
-      accent: indigo
+      primary: black
+      accent: black
       toggle:
         icon: material/toggle-switch
         name: Switch to light mode
