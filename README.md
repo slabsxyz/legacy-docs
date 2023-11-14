@@ -11,7 +11,7 @@ To run in development mode allowing hot-reload on changes, run:
 mkdocs serve 
 ```
 
-or, if you want to build the entire project for statis serving, use
+or, if you want to build the entire project for static serving, use
 
 ```sh
 mkdocs build
