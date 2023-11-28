@@ -13,7 +13,7 @@ Or have a deeper look with our [whitepaper](https://docsend.com/view/dbk48wukd3i
 
 ## What's Dippi? A little bit of history...
 
-??? Info "TL;DR for the those in a hurry"
+??? Info "TL;DR for those in a hurry"
     1. Dippi abstracts **private key management** with a permission-less peer-to-peer network, allowing users to use private keys **across several devices and dApps**. 
     2. Solving the private-key management problem (in a **non-custodial way**) is an unavoidable obstacle to Web3 widespread adoption: An expected, but still non-trivial, infrastructure revolution we are leading.
     3. We have over a year of research on distributed secure storage for sensitive data and have developed our own **general framework, SCAS (State-change authentication schemes)**, for authentication methods compatible with our protocol, which include all usual authentication pipelines which don't require users to remember a password or seedphrase (biometrics, hardware-based, behavior-based authentications).
@@ -46,7 +46,7 @@ Today, Dippi still is innovating and building to lead the infrastructure revolut
 
 <!-- ## Why integrate with Dippi?
 
-??? Info "TL;DR for the those in a hurry"
+??? Info "TL;DR for those in a hurry"
     placeholder
 
 placeholder -->
