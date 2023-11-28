@@ -2,7 +2,9 @@
 #        General info
 #===============================
 site_name: Dippi Documentation
-repo_url: https://github.com/dippixyz
+repo_url: https://github.com/dippixyz/
+repo_name: dippixyz
+edit_uri: docs/edit/master/docs/
 extra:
   generator: false
 
@@ -33,6 +35,7 @@ theme: # Current theme's config
   features:
     - content.code.copy           # Allow copy button un code blocks
     - content.code.annotate       # Allow pop-up comments in code blocks
+    - content.action.edit
 
 #======================================================================
 markdown_extensions: # Extensions used to build a more featureful docs
