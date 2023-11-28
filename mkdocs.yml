@@ -55,3 +55,7 @@ markdown_extensions: # Extensions used to build a more featureful docs
   - pymdownx.snippets             # Allow inserting snippets of other files
   - pymdownx.superfences          # Allow arbitrary nesting of content blocks
   - attr_list                     # Allows to add HTML/CSS to almost every Markdown element
+  # Admonitions
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
