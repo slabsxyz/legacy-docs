@@ -1,5 +1,7 @@
 # Basic concepts
 
+## Definitions
+
 Dippi is a **Permission-less peer-to-peer network for cryptographic tokens**. Let's unpack word by word:
 
 ### **Cryptographic token**
@@ -8,7 +10,11 @@ by _cryptographic_ token we mean any piece of _organized data_ which serves the 
 Another example is simple username and password pairs on a centralized database, since they give access control based on the central authority's backend rules. In general, we called them "cryptographic" since their structure _hides information_ that allow asymmetric capabilities to the holders.
 
 ### **Permission-less**
-To be a _permission-less_ network means to be open for everyone to participate as a node, by just following the specifications to be one; there is no central authority who can 
+To be a _permission-less_ network means to be open for everyone to participate as a node, by just following the specifications to be one; there is no central authority who can modify the state and operations of the network, nor it is necessary to "ask for permission" to (i.e. get approved by) said central authority.
+
+## Additional concepts
+
+Additional concepts relevant to our vision and project are discussed further:
 
 ### **Usability**
 It's common to say that Web3 has an "onboarding" problem, referring to the process of bringing new users into some specific user experience, but frequently leaving aside the fact that, even if onboarded, dApps' user experience by itself is lacking proper polish. When we talk about _good usability_ on Dippi, we refer to the property of a dApp to allow its users to operate without any special knowledge (about private keys, blockchain, tokens, etc.) with web2-like UX.
