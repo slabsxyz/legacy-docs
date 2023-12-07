@@ -2,14 +2,14 @@
 
 ## Quickstart
 
-You can start by looking at our guides:
+For code integration with our SDK, you can start by looking at our guides:
 
 - Guide for using our [SDK with React](guides/sdk_react.md).
 - Guide for using our [SDK with React Native and Expo](guides/sdk_reactNative_expo.md).
 - Guide for using our [SDK with node and express](guides/sdk_node_express.md).
 - Guide for using [TBAs (Token Bound Accounts) through our SDK with express](guides/sdk_tba_express.md).
 
-Or have a deeper look with our [whitepaper](https://docsend.com/view/dbk48wukd3ivd3ad).
+For **explanation of our technology**, see [here](technology). Or have an **even deeper look** with our [whitepaper](https://docsend.com/view/dbk48wukd3ivd3ad).
 
 ## What's Dippi? A little bit of history...
 

@@ -1,26 +1,19 @@
-# Basic concepts
+# Important Concepts
 
-## Definitions
+## **Cryptographic token**
+by <u>_cryptographic_</u> token we mean any piece of <u>_organized data_</u> which serves the purpose of singling out some <u>_property_</u> to just one entity (person, agent, etc; depending on the context), usually with **cryptographic guarantees** that it only belongs to that entity; i.e. cryptographic binding. 
 
-Dippi is a **Permission-less peer-to-peer network for cryptographic tokens**. Let's unpack word by word:
+For example, a private key in a [public-key cryptosystem](https://en.wikipedia.org/wiki/Public-key_cryptography) attributes the keyholder a unique ability to produce signed messages. The cryptographic binding here is the computational intractability of forging a signature if you're not the keyholder. The same applies to delegated signing keys or Decentrally generated keys. Cryptographic tokens are the basis for decentralizing identity, access control and operations in Web3, but are also the source of the trade-off between Web3 benefits and usability.
 
-### **Cryptographic token**
-by _cryptographic_ token we mean any piece of _organized data_ which serves the purpose of singling out some _property_ to just one entity (person, agent, etc; depending on the context). For example, a private key in a [public-key cryptosystem](https://en.wikipedia.org/wiki/Public-key_cryptography) attributes the keyholder a unique identity by differentiating messages signed by said key, as well as producing secret communication (encrypted) communication, giving them agency over what they communicate to whom, while providing their identity.  
+Not all cryptographic tokens needs to be decentralized, though: Simple username and password pairs on a centralized database are one example, since they give access control based on the central authority's backend rules to each specific user. Here we have binding which depends on the trust on said centralized party.
 
-Another example is simple username and password pairs on a centralized database, since they give access control based on the central authority's backend rules. In general, we called them "cryptographic" since their structure _hides information_ that allow asymmetric capabilities to the holders.
+In general, we called them "cryptographic" since their structure <u>_hides information_</u> that allow asymmetric capabilities to the holders, and **losing them** means losing said capabilities.
 
-### **Permission-less**
-To be a _permission-less_ network means to be open for everyone to participate as a node, by just following the specifications to be one; there is no central authority who can modify the state and operations of the network, nor it is necessary to "ask for permission" to (i.e. get approved by) said central authority.
-
-## Additional concepts
-
-Additional concepts relevant to our vision and project are discussed further:
-
-### **Usability**
+## **Usability**
 It's common to say that Web3 has an "onboarding" problem, referring to the process of bringing new users into some specific user experience, but frequently leaving aside the fact that, even if onboarded, dApps' user experience by itself is lacking proper polish. When we talk about _good usability_ on Dippi, we refer to the property of a dApp to allow its users to operate without any special knowledge (about private keys, blockchain, tokens, etc.) with web2-like UX.
 
-### **Key Management Abstraction**
-Key Management Abstraction (KMA) let anyone store cryptographic secrets for later retrieval through simple and intuitive authentication to mitigate risk currently associated to private keys: 
+## **Key Management Abstraction**
+Key Management Abstraction (KMA) let anyone store cryptographic tokens for later retrieval through simple and intuitive authentication interface to mitigate risk currently associated to private keys: 
 
 1. **Loss risk**: Risk of losing your private key, losing in the process access to all associated assets.
 2. **Theft risk**: Risk of your private key being held by another unintended person/agent, which could imply loss of assets or inappropriate use of identity, even if you still hold access to them yourself.
@@ -29,18 +22,23 @@ Key Management Abstraction (KMA) let anyone store cryptographic secrets for late
 
 We abstract key management operations like private key storage and retrieval by expressing users' identities over a decentralized and permission-less infrastructure as a map between **intuitive authentication methods** (i.e. traditional web2 authentication, preferably biometrics, behavior-based and hardware-based) to **cryptographic tokens**.
 
+## **State change authentication scheme**
 
-### **State-Change Authentication Token**
+Described more deeply and technically on our [whitepaper](https://docsend.com/view/dbk48wukd3ivd3ad), **State Change Authentication Schemes (SCAS)** is a family of authentication methods designed by Dippi to fully describe how traditional authentication schemes can leverage decentralized systems properties to add a [decentralization-driven security](overview#decentralization-driven-security) layer over intuitive UX to which users are already familiar. 
+
+These provide an interface data structure called **State Change Authentication Token (SCAT)**, inside which general authentication information is stored mixed with a [cryptographic token](overview#cryptographic-token) shard, allowing the network to pinpoint securely when to react to retrieval requests. Any authentication method, like traditional biometrics, hardware-based, password/pin-based, etc. can be used to interface with SCAS throught a SCAT to provide decentralized protection without jeopardizing already accepted user-experience.
+
+## **State-Change Authentication Token**
 Our own **cryptographic data-structure** in charge of holding **shares of cryptographic tokens** to be secured along with enough **authentication information** for observers (our network nodes) to authenticate users through a challenge-response procedure, verified distributively across several of them, **without jeopardizing** its contents.
 
 Apart from the cryptographic token share, coming from a perfect-security splitting procedure and further secured, it contains standardized information about the authentication token (e.g. biometric data, hardware key, etc.) as a dynamical system's state space being evolved uniquely by said token, providing a general framework for time-distributed authentication methods (e.g. behavioral biometrics, on-chain identity, etc.). 
 
-### **Decentralization-driven security**
+## **Decentralization-driven security**
 Decentralization comes with several benefits, few obvious ones such as **data redundancy** and **integrity**, **robustness against some attacks** that would be very effective against **single points of failure**, etc. Nevertheless, its security (meaning, its resistance against behaving unexpectedly, given the effort of an adversary) is usually based solely on cryptographic primitives with **fixed security** levels given a **threat model** and **chosen parameters**.
 
 This is by no means bad or weak in most cases, but it doesn't always scale naturally with the system size. Sometimes even on the contrary, scaling some networks can make them less secure by exposing more "weak links". When a system scales its security level along with its size, we call it **decentralizartion-driven security**, and it's a security property we designed our network to have.
 
-### **Token Bound Accounts**
+## **Token Bound Accounts**
 Token Bound Accounts, abbreviated TBA, are the result of a smart-contract-based strategy to append account functionality (assets holding and transferring) to Non-Fungible Tokens. This is done through a permission-less and owner-less registry contract which assign proxy interfaces for account operations when called (signed) by the NFT owner. 
 
 This has several use cases such as:
