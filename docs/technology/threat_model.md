@@ -1,12 +1,37 @@
 ## Introduction
 A threat model involves describing the following aspects:
 
-1. **Security definition**: We need to define what we *exactly* mean when we say "we are a secure network". This is done by defining the resources we are trying to protect and properties we are trying to ensure.
-2. **Adversary objectives**: Given the guarantees defined in our security concept, we then must describe the adversary objectives. This may be acquiring some total information (e.g. stealing either a specific target private key, or any private key), or partial information (like progressively learning the locations of specific shards); or may be affecting some network services (the storage, retrieval and/or mixing), either by stopping them, only interrupting them, or spoofing them.
-3. **Computational resources assumptions for the adversary**: The adversary is defined by their goals, and hence their incentives, but also their computational resources that will imply some cost of seeking their objective. If this cost, given their computational resources, is too high compared with the incentives, we can assume a lower number (in practice) of adversaries matching that specific attack. Keeping consideration of this number may be specially important when analyzing [decentralization-driven security](overview#decentralization-driven-security).
-
+1. **System objective**: All threat models must begin with an understanding of what the system is intended to do. Most commonly, said intended purpose is to support agents interacting with the system, and the threats come from the possible actions the agents are allowed to do <u>over some set of *assets*</u>, constrained by system rules.
+2. **Security definition**: We need to define what we *exactly* mean when we say "we are a *secure* network", preferably in a measurable way. This is done by defining the resources we are trying to protect and properties we are trying to ensure, the ways and extend in which these are being endangered, with respect to the previously stated system objective.
+3. **Adversary objectives**: Given the guarantees defined in our security concept, we then must describe the adversary objectives. This may be acquiring some total information (e.g. stealing either a specific target private key, or any private key), or partial information (like progressively learning the locations of specific shards); or may be affecting some network services (the storage, retrieval and/or mixing), either by stopping them, only interrupting them, or spoofing them.
+4. **Computational resources assumptions for the adversary**: The adversary is defined by their goals, and hence their incentives, but also their computational resources that will imply some cost of seeking their objective. If this cost, given their computational resources, is too high compared with the incentives, we can assume a lower number (in practice) of adversaries matching that specific attack. Keeping consideration of this number may be specially important when analyzing [decentralization-driven security](../overview#decentralization-driven-security).
 
 ## Threat model
+### System Objective
+
+The State Observing Network's objective is simple: 
+
+!!! info "State Observing Network objective"
+    Store [Cryptographic tokens](../overview#cryptographic-token) (e.g. private keys) in a decentralized, permission-less, trust-less and highly available way, keeping them retrievable through familiar, but flexibly more robust, authentication methods.
+
+In many complex and hierarchical system, we can pinpoint many agent types: Administrators, read-only user, differently limited operators, etc. 
+
+Luckily, in peer-to-peer systems, agent interactions tends to be more symmetric. In the case of Dippi, we have a few roles one node can be acting in, but symmetry still exists in the sense that each role can be attained by any node without preference in an unpredictable (and thus uncontrollable) way. 
+
+We have the following table explaining them:
+
+| Role | Task |
+|:-----|:-----|
+| Storage Node | Stores SCAS securely and in a uncorrelated way. | 
+| Challenger Node | Challenge making, with MPC within share-state groups and independent challenge verification over homomorphically encrypted data. |
+| Entrypoint Node | Receive storage and retrieval requests and acts accordingly updating and broadcasting global network state (by consensus procedure) and re-send data packets through the currently valid mixnet. |
+| Mixnet Node | In charge of receiving and re-sending onion messages, "peeling" onion layers by decrypting them before re-sending to the appropriate next node. |
+| Pseudo-storage Node | Acts as a storage node to add entropy by noise in the network operations, being unable themselves to know if they are participating in a true storing procedure or not. | 
+
+<!-- These roles interact differently with the relevant system resources. These resources are:
+
+| Resource |  -->
+
 ### Security Definition
 
 Let's define specific threats and their associated property at risk:
@@ -20,13 +45,13 @@ Let's define specific threats and their associated property at risk:
 
 #### General countermeasures
 
-The following
+The following describes point-by-point security countermeasures for the mentioned risks:
 
-- **Spoofing:** The [SCAT](overview#state-change-authentication-token) leverages Shamir secret sharing (SSS) to introduce threshold security/redundancy with perfect (information theoretic) security guarantees. That means that, even when *some* shards (less than the total) are in hands of the adversary, it is impossible to recover the original key (except, of course, by a brute force search in the complete key space, which is always possible anyway).
+- **Spoofing:** The [SCAT](../overview#state-change-authentication-token) leverages Shamir secret sharing (SSS) to introduce threshold security/redundancy with perfect (information theoretic) security guarantees. That means that, even when *some* shards (less than the total) are in hands of the adversary, it is impossible to recover the original key (except, of course, by a brute force search in the complete key space, which is always possible anyway).
 - **Tempering:** As explained on several security-related theorems in our [whitepaper](https://docsend.com/view/dbk48wukd3ivd3ad), there is network scale beyond which the network is always resistant (equivalently to a 256-resistance in traditional cryptography) to collusion attacks even of 99% of the network, ensuring resistance against directly adversarial parties. Now, for passive adversaries like unreliable nodes, there is a dynamic measure of redundancy, where the number of redundant nodes for each SCAT is increased (or decreased) in proportion to the success rate of retrieval and storage requests.
 - **Data Leak:** The SCATs' batch preparation and mixing during the storage flow ensures data is not leaked during data traffic and the whole storage lifetime. 
 - **Denial of Service:** General availability guarantees are protected by the staking and rating mechanisms, based on several global metrics of past successful behavior of the network. The spoofing during mixing is protected again by the scale of the network (past 6k nodes to ensure 256-bit strength against 99%-sized collusion attacks)
 
-<!-- ### Computational resources assumptions -->
+<!-- ### Computational resources assumptions TODO-->
 
 

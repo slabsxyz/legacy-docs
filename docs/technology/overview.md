@@ -1,5 +1,8 @@
 # Important Concepts
 
+The following is a reference list for commonly used and/or core concepts in Dippi. For a more guided tour around out technology and theoretical concepts, visit [here](../#introduction) 
+<!-- or our guide [...] TODO -->
+
 ## **Cryptographic token**
 by <u>_cryptographic_</u> token we mean any piece of <u>_organized data_</u> which serves the purpose of singling out some <u>_property_</u> to just one entity (person, agent, etc; depending on the context), usually with **cryptographic guarantees** that it only belongs to that entity; i.e. cryptographic binding. 
 
@@ -24,9 +27,9 @@ We abstract key management operations like private key storage and retrieval by 
 
 ## **State change authentication scheme**
 
-Described more deeply and technically on our [whitepaper](https://docsend.com/view/dbk48wukd3ivd3ad), **State Change Authentication Schemes (SCAS)** is a family of authentication methods designed by Dippi to fully describe how traditional authentication schemes can leverage decentralized systems properties to add a [decentralization-driven security](overview#decentralization-driven-security) layer over intuitive UX to which users are already familiar. 
+Described more deeply and technically on our [whitepaper](https://docsend.com/view/dbk48wukd3ivd3ad), **State Change Authentication Schemes (SCAS)** is a family of authentication methods designed by Dippi to fully describe how traditional authentication schemes can leverage decentralized systems properties to add a [decentralization-driven security](../overview#decentralization-driven-security) layer over intuitive UX to which users are already familiar. 
 
-These provide an interface data structure called **State Change Authentication Token (SCAT)**, inside which general authentication information is stored mixed with a [cryptographic token](overview#cryptographic-token) shard, allowing the network to pinpoint securely when to react to retrieval requests. Any authentication method, like traditional biometrics, hardware-based, password/pin-based, etc. can be used to interface with SCAS throught a SCAT to provide decentralized protection without jeopardizing already accepted user-experience.
+These provide an interface data structure called **State Change Authentication Token (SCAT)**, inside which general authentication information is stored mixed with a [cryptographic token](../overview#cryptographic-token) shard, allowing the network to pinpoint securely when to react to retrieval requests. Any authentication method, like traditional biometrics, hardware-based, password/pin-based, etc. can be used to interface with SCAS throught a SCAT to provide decentralized protection without jeopardizing already accepted user-experience.
 
 ## **State-Change Authentication Token**
 Our own **cryptographic data-structure** in charge of holding **shares of cryptographic tokens** to be secured along with enough **authentication information** for observers (our network nodes) to authenticate users through a challenge-response procedure, verified distributively across several of them, **without jeopardizing** its contents.
