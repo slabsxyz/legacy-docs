@@ -32,16 +32,18 @@ We have the following table explaining them:
 
 | Resource |  -->
 
-### Security Definition
+### Security Definition and Adversary Objectives
 
 Let's define specific threats and their associated property at risk:
 
-| Threat | What is it threatening? | Explanation | 
+| Threat | What is it threatening? | Explanation and adversary objective | 
 |:-------|:------------------------|:------------|
 | [Spoofing](https://en.wikipedia.org/wiki/Spoofing_attack) | Authenticity | Your private key should not be retrievable by no one else. | 
 | [Tampering](https://en.wikipedia.org/wiki/Tampering_(crime))| Integrity | Your private key should be available even against unreliable and adversarial nodes. |
 | [Data leak](https://en.wikipedia.org/wiki/Data_leak) | Confidentiality | Key shards should be impossible to intercept and extract information from during traffic and when stored. This includes even partial statistical information, with enough significance to make tractable a short to middle term (~100 years) expected reconstruction of the key. |
 | [Denial of service](https://en.wikipedia.org/wiki/Denial-of-service_attack) | Availability | We are requiring specific availability assumptions about the following network services: <br><br> 1. **Storage requests**: Storage should be resistant to being forced to stop, however we are allowing slowing down of storage requests inside some reasonable (from the UX perspective) threshold, since slowing down may come not only from direct attacks, but as fluctuations on supply & demand, which are natural. <br><br> 2. **Retrieval requests**: As the main mechanism for private key availability, we require a stricter threshold for allowed slowing than storage requests, but otherwise, the same applies as before. <br><br> 3. **Mixing**: Since mixing ensures decentralization-driven security, we expect not only for it to always fully work, but to be immune to spoofing attacks in the sense that a big enough entity shouldn't be able to impersonate enough nodes in the network such that the whole network operation becomes faulty.|
+
+Here we have 
 
 #### General countermeasures
 
