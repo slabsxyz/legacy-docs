@@ -22,7 +22,7 @@ We have the following table explaining them:
 
 | Role | Task |
 |:-----|:-----|
-| Storage Node | Stores SCAS securely and in a uncorrelated way. | 
+| Storage Node | Stores SCAT securely and in a uncorrelated way. | 
 | Challenger Node | Challenge making, with MPC within share-state groups and independent challenge verification over homomorphically encrypted data. |
 | Entrypoint Node | Receive storage and retrieval requests and acts accordingly updating and broadcasting global network state (by consensus procedure) and re-send data packets through the currently valid mixnet. |
 | Mixnet Node | In charge of receiving and re-sending onion messages, "peeling" onion layers by decrypting them before re-sending to the appropriate next node. |
