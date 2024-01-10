@@ -34,7 +34,7 @@ The code begins with importing the required modules and libraries:
 ### Dippi SDK Initialization
 
 ```js
-const Dippi = require('@dippixyz/sdk');
+const Dippi = require('@dippixyz/base');
 
 function DippiSignin() {
     const DippiClient = new Dippi({

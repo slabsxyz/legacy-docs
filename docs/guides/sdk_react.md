@@ -5,7 +5,7 @@ draft: false
 ShowToc: true
 ---
 
-Welcome to your friendly guide to using `@dippixyz/sdk` 🚀. Please [contact us](mail:hello@dippi.xyz) if you face any problems implementing!
+Welcome to your friendly guide to using `@dippixyz/base` 🚀. Please [contact us](mail:hello@dippi.xyz) if you face any problems implementing!
 
 **Please note the following frequent issues before you begin:**
 
@@ -53,18 +53,18 @@ The example provided below assumes that you are using **`React + Typescript`** a
 
 1. Install the SDK. If you want to view the package in npm, click below: 
     
-    [npm: @dippixyz/sdk](https://www.npmjs.com/package/@dippixyz/sdk)
+    [npm: @dippixyz/base](https://www.npmjs.com/package/@dippixyz/base)
     
     Open your project’s terminal and run this command: 
     
     ```sh
-    npm i @dippixyz/sdk
+    npm i @dippixyz/base
     ```
     
     1. Once the SDK is installed you can import it this way:
     
     ```js
-    const Dippi = require('@dippixyz/sdk');
+    const Dippi = require('@dippixyz/base');
     ```
     
     1. We recommend creating an environment variable in your project (`.env`) or a separate file where you can store your credentials without exposing them in your code.
@@ -88,7 +88,7 @@ The example provided below assumes that you are using **`React + Typescript`** a
     
     ```js
     import React, { useState } from 'react';
-    const Dippi = require('@dippixyz/sdk');
+    const Dippi = require('@dippixyz/base');
     
     function DippiSignin() {
         
@@ -291,7 +291,7 @@ Ready? Extract the second parameter in this case and proceed.
 
 ```js
 import React, { useState } from 'react';
-const Dippi = require('@dippixyz/sdk');
+const Dippi = require('@dippixyz/base');
 
 function DippiSignin() {
 

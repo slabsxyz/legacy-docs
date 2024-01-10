@@ -17,13 +17,13 @@ The backend is developed using Node.js and Express framework, and it comprises v
 
 ## **Introduction**
 
-The backend API plays a pivotal role in the functionality and success of your application. It's designed to seamlessly handle various crucial tasks such as managing users, facilitating wallet operations, handling applications, enabling secure authentication, and more. To streamline these operations and provide enhanced features, your backend leverages the power of the **`@dippixyz/sdk`** library.
+The backend API plays a pivotal role in the functionality and success of your application. It's designed to seamlessly handle various crucial tasks such as managing users, facilitating wallet operations, handling applications, enabling secure authentication, and more. To streamline these operations and provide enhanced features, your backend leverages the power of the **`@dippixyz/base`** library.
 
-### **The Power of `@dippixyz/sdk`**
+### **The Power of `@dippixyz/base`**
 
-One of the core strengths of this backend lies in its integration with the **`@dippixyz/sdk`** library. This SDK offers a comprehensive set of tools and functionalities that empower your backend to interact seamlessly with the Dippi platform. By leveraging the capabilities of the **`@dippixyz/sdk`**, your backend gains access to a wealth of features that simplify application management, user authentication, wallet handling, and more.
+One of the core strengths of this backend lies in its integration with the **`@dippixyz/base`** library. This SDK offers a comprehensive set of tools and functionalities that empower your backend to interact seamlessly with the Dippi platform. By leveraging the capabilities of the **`@dippixyz/base`**, your backend gains access to a wealth of features that simplify application management, user authentication, wallet handling, and more.
 
-The **`@dippixyz/sdk`** library serves as the bridge between your backend and the Dippi ecosystem. It encapsulates intricate processes, allowing you to focus on building an efficient and feature-rich backend without the need to handle intricate details manually. With the power of the SDK, your backend can execute actions smoothly and securely, offering a seamless experience to your users.
+The **`@dippixyz/base`** library serves as the bridge between your backend and the Dippi ecosystem. It encapsulates intricate processes, allowing you to focus on building an efficient and feature-rich backend without the need to handle intricate details manually. With the power of the SDK, your backend can execute actions smoothly and securely, offering a seamless experience to your users.
 
 ## Introduction
 
@@ -48,7 +48,7 @@ The `tokenBoundAccount.js` file provides methods to interact with tokenBoundAcco
 ### Method: create
 
 ```js
-const TBA = require('@dippixyz/sdk');
+const TBA = require('@dippixyz/base');
 
 const create = async (data) => {
     const TBAClient = new TBA(paramsOauthSession);
@@ -104,18 +104,18 @@ The example provided below assumes that you are using **`React + Typescript`** a
 
 1. Install the SDK. If you want to view the package in npm, click below: 
     
-    [npm: @dippixyz/sdk](https://www.npmjs.com/package/@dippixyz/sdk)
+    [npm: @dippixyz/base](https://www.npmjs.com/package/@dippixyz/base)
     
     Open your project’s terminal and run this command: 
     
     ```sh
-    npm i @dippixyz/sdk
+    npm i @dippixyz/base
     ```
     
     1. Once the SDK is installed you can import it this way:
     
     ```js
-    const TBA = require('@dippixyz/sdk');
+    const TBA = require('@dippixyz/base');
     ```
     
     1. We recommend creating an environment variable in your project (`.env`) or a separate file where you can store your credentials without exposing them in your code.
@@ -132,7 +132,7 @@ The example provided below assumes that you are using **`React + Typescript`** a
 2. The following is your index file. Add the call to the TBA SDK function in order to consume the services: 
     ```js
     const app = express();
-    const TBA = require('@dippixyz/sdk');
+    const TBA = require('@dippixyz/base');
 
 
     app.get('/test', async (req, res) => {

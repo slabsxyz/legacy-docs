@@ -17,13 +17,13 @@ The backend is developed using Node.js and Express framework, and it comprises v
 
 ## **Introduction**
 
-The backend API plays a pivotal role in the functionality and success of your application. It's designed to seamlessly handle various crucial tasks such as managing users, facilitating wallet operations, handling applications, enabling secure authentication, and more. To streamline these operations and provide enhanced features, your backend leverages the power of the **`@dippixyz/sdk`** library.
+The backend API plays a pivotal role in the functionality and success of your application. It's designed to seamlessly handle various crucial tasks such as managing users, facilitating wallet operations, handling applications, enabling secure authentication, and more. To streamline these operations and provide enhanced features, your backend leverages the power of the **`@dippixyz/base`** library.
 
-### **The Power of `@dippixyz/sdk`**
+### **The Power of `@dippixyz/base`**
 
-One of the core strengths of this backend lies in its integration with the **`@dippixyz/sdk`** library. This SDK offers a comprehensive set of tools and functionalities that empower your backend to interact seamlessly with the Dippi platform. By leveraging the capabilities of the **`@dippixyz/sdk`**, your backend gains access to a wealth of features that simplify application management, user authentication, wallet handling, and more.
+One of the core strengths of this backend lies in its integration with the **`@dippixyz/base`** library. This SDK offers a comprehensive set of tools and functionalities that empower your backend to interact seamlessly with the Dippi platform. By leveraging the capabilities of the **`@dippixyz/base`**, your backend gains access to a wealth of features that simplify application management, user authentication, wallet handling, and more.
 
-The **`@dippixyz/sdk`** library serves as the bridge between your backend and the Dippi ecosystem. It encapsulates intricate processes, allowing you to focus on building an efficient and feature-rich backend without the need to handle intricate details manually. With the power of the SDK, your backend can execute actions smoothly and securely, offering a seamless experience to your users.
+The **`@dippixyz/base`** library serves as the bridge between your backend and the Dippi ecosystem. It encapsulates intricate processes, allowing you to focus on building an efficient and feature-rich backend without the need to handle intricate details manually. With the power of the SDK, your backend can execute actions smoothly and securely, offering a seamless experience to your users.
 
 ## Introduction
 
@@ -80,7 +80,7 @@ The `tokenBoundAccount-router.js` manages wallet operations.
 
 ### DippiClient Model
 
-The `DippiClient` class encapsulates the initialization and configuration of the `@dippixyz/sdk` library. This module is essential for establishing a connection between your backend and the Dippi platform. It provides methods to authenticate, set up authentication tokens, and obtain a configured client instance for further interactions with the Dippi platform.
+The `DippiClient` class encapsulates the initialization and configuration of the `@dippixyz/base` library. This module is essential for establishing a connection between your backend and the Dippi platform. It provides methods to authenticate, set up authentication tokens, and obtain a configured client instance for further interactions with the Dippi platform.
 
 You can get `API KEYS` in **https://client.dippi.xyz** 
 
@@ -100,7 +100,7 @@ The constructor of the `DippiClient` class is responsible for creating an instan
 ##### Example
 
 ```js
-const Dippi = require('@dippixyz/sdk');
+const Dippi = require('@dippixyz/base');
 require('dotenv').config();
 
 class DippiClient {
@@ -373,7 +373,7 @@ module.exports = {
 
 <!-- ## Conclusion
 
-This documentation provides an overview of the backend API routes and their corresponding functionalities, as well as the models responsible for handling various operations. Developers can refer to this documentation to understand how to interact with the backend API, manage users, applications, wallets, authentication, and more, while utilizing the `@dippixyz/sdk` library effectively.
+This documentation provides an overview of the backend API routes and their corresponding functionalities, as well as the models responsible for handling various operations. Developers can refer to this documentation to understand how to interact with the backend API, manage users, applications, wallets, authentication, and more, while utilizing the `@dippixyz/base` library effectively.
 
 This document provides technical documentation for the backend API of your application. The backend is developed using Node.js and Express framework, and it comprises various routes that handle different functionalities such as user management, wallet operations, application handling, authentication, and more. -->
 
@@ -385,7 +385,7 @@ The `tokenBoundAccount.js` file provides methods to interact with tokenBoundAcco
 #### Method: create
 
 ```js
-const TBA = require('@dippixyz/sdk');
+const TBA = require('@dippixyz/base');
 
 const create = async (data) => {
     const TBAClient = new TBA(paramsOauthSession);
