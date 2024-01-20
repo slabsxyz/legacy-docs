@@ -5,13 +5,16 @@ draft: false
 ShowToc: true
 ---
 
-Welcome to your friendly guide to using `@dippixyz/base` 🚀. Please [contact us](mail:hello@dippi.xyz) if you face any problems implementing!
+Welcome to your friendly guide to using [`@dippixyz/base`](#steps-using-dippixyzbase) and [`@dippixyz/react-sdk`](#steps-using-dippixyzreact-sdk) 🚀. Please [contact us](mail:hello@dippi.xyz) if you face any problems implementing!
 
 **Please note the following frequent issues before you begin:**
 
-1. This SDK is written in JS —you’ll need to run an Node version ≥ 18. This SDK uses fetch as a request manager.
-2. This SDK can be used both in your backend or your frontend!
+1. This SDK is written in JS —you’ll need to run this on Node version ≥ 18. This SDK uses fetch as a request manager.
+2. The [`@dippixyz/base`](#steps-using-dippixyzbase) SDK can be used both in your backend or your frontend!
 3. Need to keep users in the main site while they signup/sign in? We understand! To enable this for your site and your users we recommend you use the iFrame code provided ahead. Keep in mind you can always choose how to display our site.
+4. We have developed a suite of components that are included in [`@dippixyz/react-sdk`](#steps-using-dippixyzreact-sdk) to help you set up your web3 enabled website: sign up, login, reset password, change password, and signing and sending token transactions (More functionalities coming soon!). *The components in [`@dippixyz/react-sdk`](#steps-using-dippixyzreact-sdk) are only usable on the frontend.*
+
+### **Steps using `@dippixyz/base`:**
 
 ### Step 1: Getting your API token and Application ID
 
@@ -31,7 +34,7 @@ Here’s what you need to know about each of the fields:
 
 1. **App name**: Choose any name to identify the application you are registering.
 2. **Environments**: Decide if the user wallets will be generated in test net or main net.
-3. **Assigned to:**  Define the desired chain in which the w
+3. **Assigned to:**  Define the desired chain in which the wallet will be created.
 4. **Authentication Type**: Define the type of authentication that will be shown to your users when they signup/sign in with Dippi. They’ll have two options:
     1. Email: the user will receive a confirmation email
     2. SMS : the user will receive a OTP via SMS to confirm their account.
@@ -351,6 +354,64 @@ function DippiSignin() {
 
 export default DippiSignin;
 ```
+
+### **Steps using `@dippixyz/react-sdk`:**
+
+### Step 1: Get your API token adn Application ID as mentioned [previously](#step-1-getting-your-api-token-and-application-id)
+
+### Step 2: Create a simple React app
+
+1. Create a simple React app using your favorite React app creation command, for the sake of this example we're using vite. So go to your terminal and run
+```bash
+npm create vite@latest
+```
+2. Type your *project_name*. We're using `dippi-react` as our project name.
+3. Select React as your framework.
+4. Select TypeScript + SWC as your variant.
+5. Go into the `dippi-react` folder and run `npm install`.
+```bash
+cd dippi-react; npm install;
+```
+6. Install `@dippixyz/react-sdk`
+```bash
+npm install @dippixyz/react-sdk
+```
+7. Go to `src/main.tsx` and import the `@dippixyz/react-sdk` `DippiProvider`. This is used to handle communication with the Dippi Backend infrastructure.
+```typescript
+import { DippiProvider} from '@dippixyz/react-sdk';
+```
+8. Once you've imported the `DippiProvider` you have to initialize it using the `API Token` and `Application Id` that you got during [Step 1](#step-1-getting-your-api-token-and-application-id). We will do this by declaring a constant named `DippiConfig`
+```typescript
+const dippiConfig = {
+    appToken: [API Token],
+    appId: [Application Id]
+    url: 'https://api.dippi.xyz'
+};
+```
+Then we will proceed to add the DippiProvider component as a wrapper that will help keep your entire application secured and the `Dippi Context` data available at all times to perform operations using our suite of components. This is how your `src/main.tsx` should look once you've added the `DippiProvider` with its corresponding `dippiConfig` prop.
+```typescript
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import App from './App.tsx'
+import './index.css'
+import { DippiProvider} from '@dippixyz/react-sdk';
+
+const dippiConfig = {
+    appToken: [API Token],
+    appId: [Application Id]
+    url: 'https://api.dippi.xyz'
+};
+
+ReactDOM.createRoot(document.getElementById('root')!).render(
+    <React.StrictMode>
+        <DippiProvider config={dippiConfig}>
+            <App />
+        <DippiProvider />
+    </React.StrictMode>,
+)
+```
+9. Now that you've got this set up you're ready to start implementing our suite of frontend components.
+
 
 ### Voilá! Dippi and your app should work like magic now! 
 
