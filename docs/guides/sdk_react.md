@@ -365,6 +365,7 @@ export default DippiSignin;
 ```bash
 npm create vite@latest
 ```
+*Note: This tutorial was made using Vite v5.0.12, so if the flow for creating your project is different from the instructions you find in this tutorial you can do ```npm create vite@5.0.12``` instead.*
 2. Type your *project_name*. We're using `dippi-react` as our project name.
 3. Select React as your framework.
 4. Select TypeScript + SWC as your variant.
@@ -372,7 +373,7 @@ npm create vite@latest
 ```bash
 cd dippi-react; npm install;
 ```
-6. Install `@dippixyz/react-sdk`
+6. Install our frontend SDK `@dippixyz/react-sdk`
 ```bash
 npm install @dippixyz/react-sdk
 ```
@@ -380,7 +381,7 @@ npm install @dippixyz/react-sdk
 ```typescript
 import { DippiProvider} from '@dippixyz/react-sdk';
 ```
-8. Once you've imported the `DippiProvider` you have to initialize it using the `API Token` and `Application Id` that you got during [Step 1](#step-1-getting-your-api-token-and-application-id). We will do this by declaring a constant named `DippiConfig`
+8. Once you've imported the `DippiProvider` you have to initialize it using the `API Token` and `Application Id` that you got during [Step 1](#step-1-getting-your-api-token-and-application-id). We will do this by declaring a constant named `DippiConfig` and replacing the `API Token` and `Application Id` values.
 ```typescript
 const dippiConfig = {
     appToken: [API Token],
@@ -397,8 +398,8 @@ import './index.css'
 import { DippiProvider} from '@dippixyz/react-sdk';
 
 const dippiConfig = {
-    appToken: [API Token],
-    appId: [Application Id]
+    appToken: [API Token], // remember to replace with API Token value
+    appId: [Application Id] // remember to replace with Application Id value
     url: 'https://api.dippi.xyz'
 };
 
@@ -410,8 +411,66 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
     </React.StrictMode>,
 )
 ```
-9. Now that you've got this set up you're ready to start implementing our suite of frontend components.
+Now you're ready to start implementing our suite of frontend components!
+9. Next, we're going to set up our login and sign up functionality. Go to `src/App.tsx` and import the `ButtonSignin` component and the CSS styles from `@dippixyz/react-sdk`
+```typescript
+import { ButtonSignIn } from '@dippixyz/react-sdk';
+import '@dippixyz/react-sdk/index.css';
+```
+10. Now replace the code on lines 9 - 34 with the following:
+```typescript
+    return (
+        <>
+            <div className='card'>
+                <ButtonSignIn />
+            </div>
+        </>
+    )
+```
+Your `src/App.tsx` shoul look like this now:
+```typescript
+import { useState } from 'react'
+import reactLogo from './assets/react.svg'
+import viteLogo from '/vite.svg'
+import './App.css'
+import { ButtonSignIn } from '@dippixyz/react-sdk'
+import '@dippixyz/react-sdk/index.css';
 
+function App() {
+    return (
+        <>
+            <div className='card'>
+                <ButtonSignIn />
+            </div>
+        </>
+    )
+}
+
+export default App
+```
+11. Remove unused imports on lines 1 through 3 from `src.App.tsx`. Your code should look like this now:
+```typescript
+import './App.css'
+import { ButtonSignIn } from '@dippixyz/react-sdk'
+import '@dippixyz/react-sdk/index.css';
+
+function App() {
+    return (
+        <>
+            <div className='card'>
+                <ButtonSignIn />
+            </div>
+        </>
+    )
+}
+
+export default App
+```
+12. Run your application by typing the following in your terminal:
+```bash
+npm run dev
+```
+You should see the Dippi Sign in button on the screen. Test out the functionality, make sure you can sign up, create a wallet, encrypt the private key and login to your application.
 
 ### Voilá! Dippi and your app should work like magic now! 
 
