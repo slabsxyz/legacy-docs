@@ -391,10 +391,10 @@ const dippiConfig = {
 ```
 Then we will proceed to add the DippiProvider component as a wrapper that will help keep your entire application secured and the `Dippi Context` data available at all times to perform operations using our suite of components. This is how your `src/main.tsx` should look once you've added the `DippiProvider` with its corresponding `dippiConfig` prop.
 ```typescript
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App.tsx'
-import './index.css'
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App.tsx';
+import './index.css';
 import { DippiProvider} from '@dippixyz/react-sdk';
 
 const dippiConfig = {
@@ -429,11 +429,11 @@ import '@dippixyz/react-sdk/index.css';
 ```
 Your `src/App.tsx` shoul look like this now:
 ```typescript
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import { ButtonSignIn } from '@dippixyz/react-sdk'
+import { useState } from 'react';
+import reactLogo from './assets/react.svg';
+import viteLogo from '/vite.svg';
+import './App.css';
+import { ButtonSignIn } from '@dippixyz/react-sdk';
 import '@dippixyz/react-sdk/index.css';
 
 function App() {
@@ -444,14 +444,14 @@ function App() {
             </div>
         </>
     )
-}
+};
 
-export default App
+export default App;
 ```
 11. Remove unused imports on lines 1 through 3 from `src.App.tsx`. Your code should look like this now:
 ```typescript
-import './App.css'
-import { ButtonSignIn } from '@dippixyz/react-sdk'
+import './App.css';
+import { ButtonSignIn } from '@dippixyz/react-sdk';
 import '@dippixyz/react-sdk/index.css';
 
 function App() {
@@ -462,15 +462,26 @@ function App() {
             </div>
         </>
     )
-}
+};
 
-export default App
+export default App;
 ```
 12. Run your application by typing the following in your terminal:
 ```bash
 npm run dev
 ```
-You should see the Dippi Sign in button on the screen. Test out the functionality, make sure you can sign up, create a wallet, encrypt the private key and login to your application.
+You should see the Dippi Sign in button on the screen. Test out the functionality, sign up, create a wallet, encrypt the private key and login to your application.
+13. Once you've got the login setup, you can use the rest of our components and take advantage of the Dippi context to protect your application. We're going to add the sign and send transaction functionality to your application. First, you need to import the `TransactionForm` component into `src/App.tsx`.
+```typescript
+import { TransactionForm } from '@dippixyz/react-sdk';
+```
+The TransactionForm receives props that can vary according to the Web3 provider that you selected. For the time being we are supporting all providers currently supported by Ethers v6: [Alchemy](https://www.alchemy.com/), [Ankr](https://www.ankr.com/), [Cloudflare](https://www.cloudflare.com/application-services/products/web3/), [Etherscan](https://etherscan.io/register), [Infura](https://www.infura.io/), [Pocket](https://www.pokt.network/), [QuickNode](https://www.quicknode.com/).
+Click on any of the providers to get your API key and project id which should be passed as a prop to the provider of your choice. For the sake of this guide we will be using [Alchemy](https://www.alchemy.com/).
+Add the `TransactionForm` component to `src/App.tsx` on line 10 and send the `_network` (can be the chain id or the name of the network eg.: `1` or `Mainnet`), `provider` (eg.: `Alchemy`) and `apiKey`.
+```typescript
+<TransactionForm _network={1} provider={'Alchemy'} apiKey='Your API key' />
+```
+*Note: The apiKey may also be called `_apiKey`, `projectSecret`, or `applicationSecret` according to the provider you selected and can also be paired with an `applicationId` or `projectId`.*
 
 ### Voilá! Dippi and your app should work like magic now! 
 
