@@ -357,7 +357,7 @@ export default DippiSignin;
 
 ### **Steps using `@dippixyz/react-sdk`:**
 
-### Step 1: Get your API token adn Application ID as mentioned [previously](#step-1-getting-your-api-token-and-application-id)
+### Step 1: Get your API token and Application ID as mentioned [previously](#step-1-getting-your-api-token-and-application-id)
 
 ### Step 2: Create a simple React app
 
@@ -415,7 +415,7 @@ Now you're ready to start implementing our suite of frontend components!
 9. Next, we're going to set up our login and sign up functionality. Go to `src/App.tsx` and import the `ButtonSignin` component and the CSS styles from `@dippixyz/react-sdk`
 ```typescript
 import { ButtonSignIn } from '@dippixyz/react-sdk';
-import '@dippixyz/react-sdk/index.css';
+import '@dippixyz/react-sdk/dist/index.css';
 ```
 10. Now replace the code on lines 9 - 34 with the following:
 ```typescript
@@ -427,14 +427,14 @@ import '@dippixyz/react-sdk/index.css';
         </>
     )
 ```
-Your `src/App.tsx` shoul look like this now:
+Your `src/App.tsx` should look like this now:
 ```typescript
 import { useState } from 'react';
 import reactLogo from './assets/react.svg';
 import viteLogo from '/vite.svg';
 import './App.css';
 import { ButtonSignIn } from '@dippixyz/react-sdk';
-import '@dippixyz/react-sdk/index.css';
+import '@dippixyz/react-sdk/dist/index.css';
 
 function App() {
     return (
@@ -452,7 +452,7 @@ export default App;
 ```typescript
 import './App.css';
 import { ButtonSignIn } from '@dippixyz/react-sdk';
-import '@dippixyz/react-sdk/index.css';
+import '@dippixyz/react-sdk/dist/index.css';
 
 function App() {
     return (
