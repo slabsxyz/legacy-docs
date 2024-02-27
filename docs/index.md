@@ -1,4 +1,4 @@
-# Welcome to Dippi's documentation
+# Welcome to Security Lab's documentation
 
 ## Quickstart
 
@@ -15,11 +15,17 @@ For a specific guide about our front-end react SDK, look at our
 
 For **explanation of our technology**, see [here](technology). Or have an **even deeper look** with our [whitepaper](https://docsend.com/view/dbk48wukd3ivd3ad).
 
-## What's Dippi? A little bit of history...
+## What's Security Labs? A little bit of history...
 
-??? abstract "TL;DR for those in a hurry" 1. Dippi abstracts **private key management** with a permission-less peer-to-peer network, allowing users to use private keys **across several devices and dApps**. 2. Solving the private-key management problem (in a **non-custodial way**) is an unavoidable obstacle to Web3 widespread adoption: An expected, but still non-trivial, infrastructure revolution we are leading. 3. We have over a year of research on distributed secure storage for sensitive data and have developed our own **general framework, SCAS (State-change authentication schemes)**, for authentication methods compatible with our protocol, which include all usual authentication pipelines which don't require users to remember a password or seedphrase (biometrics, hardware-based, behavior-based authentications). 4. **Token Bound Accounts (TBAs)**, which are NFTs which are also smart contract accounts, has allowed us to study wallet-usage pain points further, as well as showing an **even bigger need for better private key management**, since they present a large and rich set of use cases as **"portable digital profiles"**, making losing private keys even a bigger issue for the future of on-chain identity and NFT ecosystems. 5. Dippi is **leader** on the TBA market, representing **more than 60% of the deployed and used TBAs on Polygon mainnet**, with more than **160k TBA wallets**.
+??? abstract "TL;DR for those in a hurry" 
 
-Dippi is a **permission-less peer-to-peer network for cryptographic tokens** (more on our [concepts overview](technology/overview.md)), which is a really specific way of saying: <u>We protect and retrieve private keys without having them, by using a decentralized network</u>. This not only allows users to mitigate **wallet-loss** and **theft risk**, but also provide a seamless dApp experience across devices and platforms without even knowing what a private key is.
+    1. Security Labs abstracts **private key management** with a permission-less peer-to-peer network, allowing users to use private keys **across several devices and dApps**. 
+    2. Solving the private-key management problem (in a **non-custodial way**) is an unavoidable obstacle to Web3 widespread adoption: An expected, but still non-trivial, infrastructure revolution we are leading. 
+    3. We have over a year of research on distributed secure storage for sensitive data and have developed our own **general framework, SCAS (State-change authentication schemes)**, for authentication methods compatible with our protocol, which include all usual authentication pipelines which don't require users to remember a password or seedphrase (biometrics, hardware-based, behavior-based authentications). 
+    4. **Token Bound Accounts (TBAs)**, which are NFTs which are also smart contract accounts, has allowed us to study wallet-usage pain points further, as well as showing an **even bigger need for better private key management**, since they present a large and rich set of use cases as **"portable digital profiles"**, making losing private keys even a bigger issue for the future of on-chain identity and NFT ecosystems. 
+    5. Security Labs is **leader** on the TBA market, representing **more than 60% of the deployed and used TBAs on Polygon mainnet**, with more than **160k TBA wallets**.
+
+Security Labs (sLabs) protocol is a **permission-less peer-to-peer network for cryptographic tokens** (more on our [concepts overview](technology/overview.md)), which is a really specific way of saying: <u>We protect and retrieve private keys without having them, by using a decentralized network</u>. This not only allows users to mitigate **wallet-loss** and **theft risk**, but also provide a seamless dApp experience across devices and platforms without even knowing what a private key is.
 
 A simplified version of _how_ we do it can be summarized as:
 
@@ -41,9 +47,9 @@ TBAs have deep expressivity capabilities, as briefly discussed on our [concepts'
 
 After entering the TBAs market, we have already captured more than 60% market share on Polygon Mainnet, with more than 160k TBA wallets within just 6 weeks, proving not only the massive interest of the ecosystem around TBAs' capabilities, but also their interest in our project.
 
-Today, Dippi still is innovating and building to lead the infrastructure revolution we all need to make Web3 truly usable, accessible and scalable.
+Today, Security Labs still is innovating and building to lead the infrastructure revolution we all need to make Web3 truly usable, accessible and scalable.
 
-<!-- ## Why integrate with Dippi?
+<!-- ## Why integrate with Security Labs?
 
 ??? abstract "TL;DR for those in a hurry"
     placeholder

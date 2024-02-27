@@ -5,6 +5,9 @@ draft: false
 ShowToc: true
 ---
 
+!!! note "Brand change"
+    Currently, several endpoints and libraries have the name **Dippi** which is now Security Labs (sLabs), and may be read as such, although libraries and endpoints still need to be called as the former.
+
 ### Step 1: Get your API token and Application ID as mentioned [previously](../Base_SDK/sdk_react.md#step-1-getting-your-api-token-and-application-id)
 
 ### Step 2: Create a simple React app

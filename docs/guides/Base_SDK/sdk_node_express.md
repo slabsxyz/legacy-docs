@@ -11,6 +11,9 @@ updated: 2023-08-24
 ---
 # Backend API Documentation
 
+!!! note "Brand change"
+    Currently, several endpoints and libraries have the name **Dippi** which is now Security Labs (sLabs), and may be read as such, although libraries and endpoints still need to be called as the former.
+
 This document provides **technical** documentation for the backend API of your application and can go in-depth. In case of looking for a quickstart, look at our [SDK + React guide](sdk_react.md).
 
 The backend is developed using Node.js and Express framework, and it comprises various routes that handle different functionalities such as user management, wallet operations, application handling, authentication, and more.
@@ -21,9 +24,9 @@ The backend API plays a pivotal role in the functionality and success of your ap
 
 ### **The Power of `@dippixyz/base`**
 
-One of the core strengths of this backend lies in its integration with the **`@dippixyz/base`** library. This SDK offers a comprehensive set of tools and functionalities that empower your backend to interact seamlessly with the Dippi platform. By leveraging the capabilities of the **`@dippixyz/base`**, your backend gains access to a wealth of features that simplify application management, user authentication, wallet handling, and more.
+One of the core strengths of this backend lies in its integration with the **`@dippixyz/base`** library. This SDK offers a comprehensive set of tools and functionalities that empower your backend to interact seamlessly with the Security Labs (sLabs) platform. By leveraging the capabilities of the **`@dippixyz/base`**, your backend gains access to a wealth of features that simplify application management, user authentication, wallet handling, and more.
 
-The **`@dippixyz/base`** library serves as the bridge between your backend and the Dippi ecosystem. It encapsulates intricate processes, allowing you to focus on building an efficient and feature-rich backend without the need to handle intricate details manually. With the power of the SDK, your backend can execute actions smoothly and securely, offering a seamless experience to your users.
+The **`@dippixyz/base`** library serves as the bridge between your backend and the sLabs ecosystem. It encapsulates intricate processes, allowing you to focus on building an efficient and feature-rich backend without the need to handle intricate details manually. With the power of the SDK, your backend can execute actions smoothly and securely, offering a seamless experience to your users.
 
 ## Introduction
 
@@ -80,7 +83,7 @@ The `tokenBoundAccount-router.js` manages wallet operations.
 
 ### DippiClient Model
 
-The `DippiClient` class encapsulates the initialization and configuration of the `@dippixyz/base` library. This module is essential for establishing a connection between your backend and the Dippi platform. It provides methods to authenticate, set up authentication tokens, and obtain a configured client instance for further interactions with the Dippi platform.
+The `DippiClient` class encapsulates the initialization and configuration of the `@dippixyz/base` library. This module is essential for establishing a connection between your backend and the Security Labs platform. It provides methods to authenticate, set up authentication tokens, and obtain a configured client instance for further interactions with the Security Labs platform.
 
 You can get `API KEYS` in **https://client.dippi.xyz** 
 

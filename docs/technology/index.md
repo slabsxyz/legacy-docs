@@ -2,8 +2,8 @@
 
 Let's start with a one line definition for our protocol:
 
-!!! info "Dippi protocol"
-    Dippi is a **Permission-less peer-to-peer network protocol for key management.**
+!!! info "Security Labs Key Management Protocol"
+    Security Labs Key Management Protocol (sLabs KMP) is a **Permission-less peer-to-peer network protocol for key management.**
 
 **Key management** refers to the additional set of responsibilities users are given as a cost of managing their identity themselves: an unavoidable side effect of decentralization in Web3. This set of responsibilities are attached to not losing some **cryptographic token**, about which we talk more [here](overview.md#cryptographic-token), but in a nutshell is any data that allows someone to have identity inside some set of agents and access-control and operation over some set of resources shared among.
 

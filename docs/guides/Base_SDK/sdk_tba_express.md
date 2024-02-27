@@ -11,6 +11,10 @@ updated: 2023-08-24
 ---
 # Backend API Documentation
 
+
+!!! note "Brand change"
+    Currently, several endpoints and libraries have the name **Dippi** which is now Security Labs (sLabs), and may be read as such, although libraries and endpoints still need to be called as the former.
+
 This document provides **technical** documentation for the backend API of your application and can go in-depth. In case of looking for a quickstart, look at our [SDK + React guide](sdk_react.md).
 
 The backend is developed using Node.js and Express framework, and it comprises various routes that handle different functionalities such as user management, wallet operations, application handling, authentication, and more.

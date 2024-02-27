@@ -12,6 +12,9 @@ ShowToc: true
 <!-- # Documentation ReactNative + Expo: Dippi Sign-in -->
 ## Introduction
 
+!!! note "Brand change"
+    Currently, several endpoints and libraries have the name **Dippi** which is now Security Labs (sLabs), and may be read as such, although libraries and endpoints still need to be called as the former.
+
 This document aims to explain the provided React Native code that implements Dippi sign-in functionality for mobile applications. The code utilizes various libraries and APIs, including React Native, Expo, and the Dippi SDK, to enable users to sign in using their Dippi accounts.
 
 ## Code Overview

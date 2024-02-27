@@ -1,6 +1,6 @@
 # Important Concepts
 
-The following is a reference list for commonly used and/or core concepts in Dippi. For a more guided tour around out technology and theoretical concepts, visit [here](../#introduction) 
+The following is a reference list for commonly used and/or core concepts in Security Labs. For a more guided tour around out technology and theoretical concepts, visit [here](../#introduction) 
 <!-- or our guide [...] TODO -->
 
 ## **Cryptographic token**
@@ -13,7 +13,7 @@ Not all cryptographic tokens needs to be decentralized, though: Simple username 
 In general, we called them "cryptographic" since their structure <u>_hides information_</u> that allow asymmetric capabilities to the holders, and **losing them** means losing said capabilities.
 
 ## **Usability**
-It's common to say that Web3 has an "onboarding" problem, referring to the process of bringing new users into some specific user experience, but frequently leaving aside the fact that, even if onboarded, dApps' user experience by itself is lacking proper polish. When we talk about _good usability_ on Dippi, we refer to the property of a dApp to allow its users to operate without any special knowledge (about private keys, blockchain, tokens, etc.) with web2-like UX.
+It's common to say that Web3 has an "onboarding" problem, referring to the process of bringing new users into some specific user experience, but frequently leaving aside the fact that, even if onboarded, dApps' user experience by itself is lacking proper polish. When we talk about _good usability_ on Security Labs, we refer to the property of a dApp to allow its users to operate without any special knowledge (about private keys, blockchain, tokens, etc.) with web2-like UX.
 
 ## **Key Management Abstraction**
 Key Management Abstraction (KMA) let anyone store cryptographic tokens for later retrieval through simple and intuitive authentication interface to mitigate risk currently associated to private keys: 
@@ -27,7 +27,7 @@ We abstract key management operations like private key storage and retrieval by 
 
 ## **State change authentication scheme**
 
-Described more deeply and technically on our [whitepaper](https://docsend.com/view/dbk48wukd3ivd3ad), **State Change Authentication Schemes (SCAS)** is a family of authentication methods designed by Dippi to fully describe how traditional authentication schemes can leverage decentralized systems properties to add a [decentralization-driven security](../overview#decentralization-driven-security) layer over intuitive UX to which users are already familiar. 
+Described more deeply and technically on our [whitepaper](https://docsend.com/view/dbk48wukd3ivd3ad), **State Change Authentication Schemes (SCAS)** is a family of authentication methods designed by Security Labs to fully describe how traditional authentication schemes can leverage decentralized systems properties to add a [decentralization-driven security](../overview#decentralization-driven-security) layer over intuitive UX to which users are already familiar. 
 
 These provide an interface data structure called **State Change Authentication Token (SCAT)**, inside which general authentication information is stored mixed with a [cryptographic token](../overview#cryptographic-token) shard, allowing the network to pinpoint securely when to react to retrieval requests. Any authentication method, like traditional biometrics, hardware-based, password/pin-based, etc. can be used to interface with SCAS throught a SCAT to provide decentralized protection without jeopardizing already accepted user-experience.
 

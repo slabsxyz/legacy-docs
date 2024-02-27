@@ -5,6 +5,9 @@ draft: false
 ShowToc: true
 ---
 
+!!! note "Brand change"
+    Currently, several endpoints and libraries have the name **Dippi** which is now Security Labs (sLabs), and may be read as such, although libraries and endpoints still need to be called as the former.
+
 Welcome to your guide to using [`@dippixyz/base`](https://npm.io/package/@dippixyz/base) consumed directly through ReactJS components. For our suite of plug-and-play front-end components see our guide for [`@dippixyz/react-sdk`](https://npm.io/package/@dippixyz/react-sdk) [here](../Frontend_SDKs/frontend_react.md) 🚀. Please [contact us](mail:hello@dippi.xyz) if you face any problems implementing!
 
 **Please note the following frequent issues before you begin:**

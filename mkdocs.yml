@@ -1,7 +1,7 @@
 #===============================
 #        General info
 #===============================
-site_name: Dippi Documentation
+site_name: Security Labs
 repo_url: https://github.com/dippixyz/
 repo_name: dippixyz
 edit_uri: docs/edit/master/docs/
@@ -13,8 +13,8 @@ theme: # Current theme's config
 #===============================
   # Basics
   name: material
-  logo: assets/logo.png
-  favicon: assets/logo.png
+  logo: assets/slab-logo.svg
+  favicon: assets/slab-logo.svg
   # Color Schemes (and light/dark modes)
   palette:
     # Light mode

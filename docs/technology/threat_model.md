@@ -16,7 +16,7 @@ The State Observing Network's objective is simple:
 
 In many complex and hierarchical system, we can pinpoint many agent types: Administrators, read-only user, differently limited operators, etc. 
 
-Luckily, in peer-to-peer systems, agent interactions tends to be more symmetric. In the case of Dippi, we have a few roles one node can be acting in, but symmetry still exists in the sense that each role can be attained by any node without preference in an unpredictable (and thus uncontrollable) way. 
+Luckily, in peer-to-peer systems, agent interactions tends to be more symmetric. In the case of Security Labs, we have a few roles one node can be acting in, but symmetry still exists in the sense that each role can be attained by any node without preference in an unpredictable (and thus uncontrollable) way. 
 
 We have the following table explaining them:
 
