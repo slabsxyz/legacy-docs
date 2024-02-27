@@ -7,6 +7,8 @@ repo_name: dippixyz
 edit_uri: docs/edit/master/docs/
 extra:
   generator: false
+extra_css:
+  - stylesheets/extra.css
 
 #===============================
 theme: # Current theme's config
@@ -17,20 +19,18 @@ theme: # Current theme's config
   favicon: assets/slab-logo.svg
   # Color Schemes (and light/dark modes)
   palette:
-    # Light mode
-    - scheme: default
-      primary: indigo
-      accent: indigo
-      toggle:
-        icon: material/toggle-switch-off-outline
-        name: Switch to dark mode
+    # # Light mode
+    # - scheme: custom
+    #   toggle:
+    #     icon: material/toggle-switch-off-outline
+    #     name: Switch to dark mode
     # Dark mode
     - scheme: slate
       primary: black
       accent: black
-      toggle:
-        icon: material/toggle-switch
-        name: Switch to light mode
+      # toggle:
+      #   icon: material/toggle-switch
+      #   name: Switch to light mode
   # Feature set for this theme
   features:
     - content.code.copy           # Allow copy button un code blocks
