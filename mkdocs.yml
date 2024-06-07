@@ -3,7 +3,7 @@
 #===============================
 site_name: Security Labs
 repo_url: https://github.com/slabsxyz/
-repo_name: dippixyz
+repo_name: slabsxyz
 edit_uri: docs/edit/master/docs/
 extra:
   generator: false
